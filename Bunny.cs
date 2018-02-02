@@ -12,7 +12,7 @@ namespace Virtual_Pet
         private string name = "Twitch";
         private bool isHungry;
         private string isBored;
-        private string health;
+        private string colorFur;
 
 
         //Create 4 Properties in class Bunny
@@ -38,10 +38,10 @@ namespace Virtual_Pet
             set { this.isBored = value; }
         }
 
-        public string Health
+        public string ColorFur
         {
-            get { return this.Health; }
-            set { this.Health = value; }
+            get { return this.colorFur; }
+            set { this.colorFur = value; }
         }
 
         //Create Constructors
@@ -55,19 +55,23 @@ namespace Virtual_Pet
 
 
 
-        public Bunny(bool isHungry, string isBored, string health)
+        public Bunny(bool isHungry, string isBored, string colorFur)
         {
 
             this.isHungry = isHungry;
             this.isBored = isBored;
-            this.health = health;
+            this.colorFur = colorFur;
         }
 
 
 
         //Create our Methods()
+        // display pet's name
+        //feed pet
+        //check if pet is bored
+        //check pet's fur color
+        //display pet's details
 
-        //method to display pet's name
 
         public void BunnyName()
         {
@@ -91,6 +95,8 @@ namespace Virtual_Pet
             }
         }
 
+        //method to see if Twitch is bored
+
         public void  BoredBunny()
         {
             if (isBored == "1")
@@ -107,6 +113,11 @@ namespace Virtual_Pet
             }
 
         }
+
+        
+        
+           
+        
 
     }
 }

@@ -9,7 +9,7 @@ namespace Virtual_Pet
 
             int userChoice;
 
-            Bunny userBunny = new Bunny(false, "3", "feels great");
+            Bunny userBunny = new Bunny(false, "3", "black");
 
             do
             {
@@ -20,6 +20,7 @@ namespace Virtual_Pet
                 Console.WriteLine("To see your pet's name, type 1");
                 Console.WriteLine("To see if your pet is hungry, type 2");
                 Console.WriteLine("To see if your pet needs some attention, type 3");
+                Console.WriteLine("To see your pet's details, type 5");
                 Console.WriteLine("To quit, type 8");
 
                 userChoice = int.Parse(Console.ReadLine());
@@ -38,6 +39,11 @@ namespace Virtual_Pet
                         userBunny.BoredBunny();
                         break;
 
+                    case 5:
+                        Console.WriteLine("Your Bunny's name is " + userBunny.Name);
+                        Console.WriteLine(userBunny.FeedTwitch());
+                        Console.WriteLine("Your Bunny is " + userBunny.IsBored);
+                        break;
                 }
 
             } while (userChoice != 8);
