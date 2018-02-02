@@ -9,7 +9,7 @@ namespace Virtual_Pet
 
             int userChoice;
 
-            Bunny userBunny = new Bunny(false, "3", "black");
+            Bunny userBunny = new Bunny(false, true, "black", 2);
 
             do
             {
@@ -17,14 +17,19 @@ namespace Virtual_Pet
                 Console.WriteLine();
                 Console.WriteLine("Hello! Let's meet your Virtual Pet!");
                 Console.WriteLine("Your Pet is a Bunny!");
-                Console.WriteLine("To see your pet's name, type 1");
-                Console.WriteLine("To see if your pet is hungry, type 2");
-                Console.WriteLine("To see if your pet needs some attention, type 3");
-                Console.WriteLine("To see your pet's details, type 5");
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("To see your bunny's name, type 1");
+                Console.WriteLine("To see if your bunny is hungry, type 2");
+                Console.WriteLine("To see if your bunny needs some attention, type 3");
+                Console.WriteLine("To see how old your bunny is, type 4");
+                Console.WriteLine("To see what color fur your bunny has, type 5");
+                Console.WriteLine("To see your bunny's details, type 6");
                 Console.WriteLine("To quit, type 8");
 
                 userChoice = int.Parse(Console.ReadLine());
-
+                Console.WriteLine();
+                Console.WriteLine();
                 switch (userChoice)
                 {
                     case 1:
@@ -36,13 +41,25 @@ namespace Virtual_Pet
                         break;
 
                     case 3:
-                        userBunny.BoredBunny();
+                        Console.WriteLine(userBunny.BoredBunny());
+                        break;
+
+                    case 4:
+                        Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
                         break;
 
                     case 5:
+                        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
+                        break;
+
+                    case 6:
+                        Console.WriteLine();
+                        Console.WriteLine();
                         Console.WriteLine("Your Bunny's name is " + userBunny.Name);
                         Console.WriteLine(userBunny.FeedTwitch());
-                        Console.WriteLine("Your Bunny is " + userBunny.IsBored);
+                        Console.WriteLine(userBunny.BoredBunny());
+                        Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
+                        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
                         break;
                 }
 

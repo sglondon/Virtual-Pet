@@ -7,12 +7,14 @@ namespace Virtual_Pet
     public class Bunny
     {
 
-        //Create 4 Fields in class Bunny
+        //Create 5 Fields in class Bunny
 
         private string name = "Twitch";
         private bool isHungry;
-        private string isBored;
+        private bool isBored;
         private string colorFur;
+        private int age;
+
 
 
         //Create 4 Properties in class Bunny
@@ -32,7 +34,7 @@ namespace Virtual_Pet
         }
 
 
-        public string IsBored
+        public bool IsBored
         {
             get { return this.isBored; }
             set { this.isBored = value; }
@@ -42,6 +44,12 @@ namespace Virtual_Pet
         {
             get { return this.colorFur; }
             set { this.colorFur = value; }
+        }
+
+        public int Age
+        {
+            get { return this.age; }
+            set { this.age = value; }
         }
 
         //Create Constructors
@@ -55,12 +63,13 @@ namespace Virtual_Pet
 
 
 
-        public Bunny(bool isHungry, string isBored, string colorFur)
+        public Bunny(bool isHungry, bool isBored, string colorFur, int age)
         {
 
             this.isHungry = isHungry;
             this.isBored = isBored;
             this.colorFur = colorFur;
+            this.age = age;
         }
 
 
@@ -70,7 +79,7 @@ namespace Virtual_Pet
         //feed pet
         //check if pet is bored
         //check pet's fur color
-        //display pet's details
+        //display pet's age
 
 
         public void BunnyName()
@@ -97,21 +106,18 @@ namespace Virtual_Pet
 
         //method to see if Twitch is bored
 
-        public void  BoredBunny()
+        public string  BoredBunny()
         {
-            if (isBored == "1")
+            if (isBored == false)
             {
-                Console.WriteLine("Twitch is happy and alert!");
+             return   "Twitch is happy and alert!";
+                
             }
-            else if (isBored == "2")
+            else 
             {
-                Console.WriteLine("Twitch wants some attention!");
+              return "Twitch is very bored and is getting into mischief!";
             }
-            else if (isBored == "3")
-            {
-                Console.WriteLine("Twitch is very bored and is getting into mischief!");
-            }
-
+           
         }
 
         
