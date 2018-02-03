@@ -10,7 +10,7 @@ namespace Virtual_Pet
 
             int userChoice;
 
-            Bunny userBunny = new Bunny(false, true, "black", 2);
+            Bunny userBunny = new Bunny(false, true, "black", 2, "ball");
 
             do
             {
@@ -27,8 +27,8 @@ namespace Virtual_Pet
                 Console.WriteLine("To see what color fur your bunny has, type 5");
                 Console.WriteLine("To see your bunny's details, type 6");
                 Console.WriteLine("To change the color of your bunny's fur, type 7");
-
-                Console.WriteLine("To quit, type 8");
+                Console.WriteLine("To play with your bunny, type 8");
+                Console.WriteLine("To quit, type 9");
 
                 userChoice = int.Parse(Console.ReadLine());
                 Console.WriteLine();
@@ -73,12 +73,17 @@ namespace Virtual_Pet
                         string newFur = Console.ReadLine();
                         Console.WriteLine("Twitch's fur is now " + userBunny.FurChange(newFur));
                         //Console.WriteLine("Twitch's fur is now " + userBunny.ColorFur + " !");
-                       
                         break;
 
+                    case 8:
+                        Console.WriteLine();                        
+                        Console.WriteLine("Would you like to give Twitch a toy? Please type yes or no");
+                        string toy = Console.ReadLine();
+                        Console.WriteLine(userBunny.GiveToy(toy));
+                        break;
                 }
 
-            } while (userChoice != 8);
+            } while (userChoice != 9);
 
 
         }

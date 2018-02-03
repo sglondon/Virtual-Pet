@@ -7,18 +7,19 @@ namespace Virtual_Pet
     public class Bunny
     {
 
-        //Create 5 Fields in class Bunny
+        //Create  Fields in class Bunny
 
         private string name = "Twitch";
         private bool isHungry;
         private bool isBored;
         private string colorFur;
         private int age;
+        private string petToy;
 
 
 
 
-        //Create 4 Properties in class Bunny
+        //Create Properties in class Bunny
         //we're only going to use a get in the name, so
         //property so the user can't change it
 
@@ -53,6 +54,12 @@ namespace Virtual_Pet
             set { this.age = value; }
         }
 
+        public string PetToy
+        {
+            get { return this.petToy; }
+            set { this.petToy = value; }
+        }
+
         //Create Constructors
 
         //default Constructor will also set our bunny's name
@@ -64,13 +71,15 @@ namespace Virtual_Pet
 
 
 
-        public Bunny(bool isHungry, bool isBored, string colorFur, int age)
+        public Bunny(bool isHungry, bool isBored, string colorFur, int age, string petToy)
         {
 
             this.isHungry = isHungry;
             this.isBored = isBored;
             this.colorFur = colorFur;
             this.age = age;
+            this.petToy = petToy;
+
         }
 
 
@@ -108,17 +117,17 @@ namespace Virtual_Pet
 
         //method to see if Twitch is bored
 
-        public string  BoredBunny()
+        public string BoredBunny()
         {
             if (isBored == false)
             {
-             return   "Twitch is happy and alert!";
-                
+                return "Twitch is happy and alert!";
+
             }
-            else 
+            else
             {
-              return "Twitch is very bored and is getting into mischief!";
-            }                               
+                return "Twitch is very bored and is getting into mischief!";
+            }
         }
 
         //method to change the color of Twitch's fur
@@ -130,7 +139,32 @@ namespace Virtual_Pet
             return newFur;
         }
 
+        //method to change the value of isBored
+        //by giving the pet a toy
 
+        public string GiveToy(string toy)
+        {
+            if (toy == "yes")
+            {
+                
+                return "Twitch now has a ball :)";
+            }
+            else if (toy != "yes") ;
+            return "Twitch has nothing to play with :(";
+        }
+
+
+        //public void GiveToy(string toy)
+        //{
+        //    if (toy == "yes")
+        //    {
+        //        return ""
+        //    }
+        //}
+
+
+
+        }
 
 
 
@@ -138,4 +172,4 @@ namespace Virtual_Pet
 
 
     }
-}
+
