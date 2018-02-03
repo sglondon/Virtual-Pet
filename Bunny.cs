@@ -116,14 +116,22 @@ namespace Virtual_Pet
             else 
             {
               return "Twitch is very bored and is getting into mischief!";
-            }
-           
+            }                               
         }
 
+        //method to change the color of Twitch's fur
         
-        
-           
+        //public void FurChange(string newFur)
+        //{
+        //    this.colorFur = newFur;
+        //}
         
 
-    }
+
+
+
+
+
+
+}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Virtual_Pet
 {
     class Program
@@ -25,6 +26,8 @@ namespace Virtual_Pet
                 Console.WriteLine("To see how old your bunny is, type 4");
                 Console.WriteLine("To see what color fur your bunny has, type 5");
                 Console.WriteLine("To see your bunny's details, type 6");
+                Console.WriteLine("To change the color of your bunny's fur, type 7");
+
                 Console.WriteLine("To quit, type 8");
 
                 userChoice = int.Parse(Console.ReadLine());
@@ -33,7 +36,7 @@ namespace Virtual_Pet
                 switch (userChoice)
                 {
                     case 1:
-                        userBunny.BunnyName(); 
+                        userBunny.BunnyName();
                         break;
 
                     case 2:
@@ -61,10 +64,24 @@ namespace Virtual_Pet
                         Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
                         Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
                         break;
+
+                    case 7:
+                        Console.WriteLine();
+                        Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
+                        Console.WriteLine("What color would you like to make Twitch's fur?, please enter a color.");
+                        userBunny.ColorFur = Console.ReadLine();
+                        Console.WriteLine("Twitch's fur is now " + userBunny.ColorFur + " !");
+                        //string newFur
+                        break;
+
                 }
 
             } while (userChoice != 8);
+
+
         }
-        }
+
+
     }
+}
 
