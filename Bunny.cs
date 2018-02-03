@@ -14,7 +14,7 @@ namespace Virtual_Pet
         private bool isBored;
         private string colorFur;
         private int age;
-        private string petToy;
+        
 
 
 
@@ -54,11 +54,7 @@ namespace Virtual_Pet
             set { this.age = value; }
         }
 
-        public string PetToy
-        {
-            get { return this.petToy; }
-            set { this.petToy = value; }
-        }
+        
 
         //Create Constructors
 
@@ -71,14 +67,14 @@ namespace Virtual_Pet
 
 
 
-        public Bunny(bool isHungry, bool isBored, string colorFur, int age, string petToy)
+        public Bunny(bool isHungry, bool isBored, string colorFur, int age)
         {
 
             this.isHungry = isHungry;
             this.isBored = isBored;
             this.colorFur = colorFur;
             this.age = age;
-            this.petToy = petToy;
+           
 
         }
 
@@ -91,6 +87,7 @@ namespace Virtual_Pet
         //check pet's fur color
         //change pet's fur color with user input
         //display pet's age
+
 
 
         public void BunnyName()
@@ -111,7 +108,7 @@ namespace Virtual_Pet
             }
             else
             {
-                return "Twitch is not hungry, has been fed!";
+                return "Twitch is not hungry, he has been fed!";
             }
         }
 
@@ -146,21 +143,16 @@ namespace Virtual_Pet
         {
             if (toy == "yes")
             {
-                
+                isBored = false;
                 return "Twitch now has a ball :)";
             }
-            else if (toy != "yes") ;
+            else if (toy == "no") ;
+            isBored = true;
             return "Twitch has nothing to play with :(";
         }
 
 
-        //public void GiveToy(string toy)
-        //{
-        //    if (toy == "yes")
-        //    {
-        //        return ""
-        //    }
-        //}
+       
 
 
 

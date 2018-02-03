@@ -10,14 +10,16 @@ namespace Virtual_Pet
 
             int userChoice;
 
-            Bunny userBunny = new Bunny(false, true, "black", 2, "ball");
+            Bunny userBunny = new Bunny(false, true, "black", 2);
+
+            Console.WriteLine("Hello, Let's meet your Virtual Pet.");
+            Console.WriteLine("Your Pet is a Bunny!");
 
             do
             {
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("Hello! Let's meet your Virtual Pet!");
-                Console.WriteLine("Your Pet is a Bunny!");
+
+                
+               
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("To see your bunny's name, type 1");
