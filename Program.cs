@@ -69,9 +69,11 @@ namespace Virtual_Pet
                         Console.WriteLine();
                         Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
                         Console.WriteLine("What color would you like to make Twitch's fur?, please enter a color.");
-                        userBunny.ColorFur = Console.ReadLine();
-                        Console.WriteLine("Twitch's fur is now " + userBunny.ColorFur + " !");
-                        //string newFur
+                        //    userBunny.ColorFur = Console.ReadLine();
+                        string newFur = Console.ReadLine();
+                        Console.WriteLine("Twitch's fur is now " + userBunny.FurChange(newFur));
+                        //Console.WriteLine("Twitch's fur is now " + userBunny.ColorFur + " !");
+                       
                         break;
 
                 }

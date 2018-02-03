@@ -17,6 +17,7 @@ namespace Virtual_Pet
 
 
 
+
         //Create 4 Properties in class Bunny
         //we're only going to use a get in the name, so
         //property so the user can't change it
@@ -79,6 +80,7 @@ namespace Virtual_Pet
         //feed pet
         //check if pet is bored
         //check pet's fur color
+        //change pet's fur color with user input
         //display pet's age
 
 
@@ -100,7 +102,7 @@ namespace Virtual_Pet
             }
             else
             {
-                return "Twitch has been fed!";
+                return "Twitch is not hungry, has been fed!";
             }
         }
 
@@ -120,12 +122,13 @@ namespace Virtual_Pet
         }
 
         //method to change the color of Twitch's fur
-        
-        //public void FurChange(string newFur)
-        //{
-        //    this.colorFur = newFur;
-        //}
-        
+        //using user input
+
+        public string FurChange(string newFur)
+        {
+            this.colorFur = newFur;
+            return newFur;
+        }
 
 
 
@@ -133,5 +136,6 @@ namespace Virtual_Pet
 
 
 
-}
+
+    }
 }
