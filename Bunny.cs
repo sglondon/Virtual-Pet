@@ -20,7 +20,7 @@ namespace Virtual_Pet
 
 
         //Create Properties in class Bunny
-        //we're only going to use a get in the name, so
+        //we're only going to use a get in the name
         //property so the user can't change it
 
         public string Name
@@ -80,13 +80,13 @@ namespace Virtual_Pet
 
 
 
-        //Create our Methods()
+        //Create Methods() to:
         // display pet's name
         //feed pet
-        //check if pet is bored
-        //check pet's fur color
+        //check if pet is bored        
         //change pet's fur color with user input
-        //display pet's age
+        //increment pet's age
+        //give pet a toy with user input, this changes the value of isBored
 
 
 
@@ -103,15 +103,15 @@ namespace Virtual_Pet
         public string FeedTwitch(string food)
         {
             if (food == "yes")
-            
+
             {
                 isHungry = false;
                 return "Twitch is happy that he has been fed!";
             }
-                else if  (food == "no")            
+            else if (food != "yes")
                 isHungry = true;
-                return "Twitch is so hungry!";
-            }
+            return "Twitch is so hungry!";
+        }
 
         //method to see if Twitch is bored
 
@@ -135,6 +135,7 @@ namespace Virtual_Pet
         {
             this.colorFur = newFur;
             return newFur;
+
         }
 
         //method to change the value of isBored
@@ -152,12 +153,14 @@ namespace Virtual_Pet
             return "Twitch has nothing to play with :(";
         }
 
+        //method to increment age
 
         public void ChangeAge()
         {
             this.age = ++age;
         }
 
+        //method to display a message
 
         public void Message()
         {
@@ -166,7 +169,7 @@ namespace Virtual_Pet
             {
                 "What woud ",
                 "you like  ",
-                "to do next?"
+                "to do?"
             };
             foreach (string value in wheresBunny)
             {
@@ -175,22 +178,10 @@ namespace Virtual_Pet
 
         }
 
-
-        public void MessageTwo()
-        {
-
-            string[] theresBunny = new string[]
-            {
-                "There ",
-                "he ",
-                "is! "
-            };
-            foreach (string value in theresBunny)
-            {
-                Console.Write(value);
-            }
-
-        }
+        //Tick method 
+        //displays a message
+        //changes pet's age
+        //changes fur to "yellow polka dot" - this had to be hard coded since method FurChange relies on user input
 
         public void Tick()
         {
@@ -199,8 +190,7 @@ namespace Virtual_Pet
             FurChange("yellow polka dot");
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine();
-         //   MessageTwo();
+
         }
 
 
