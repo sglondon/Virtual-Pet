@@ -164,9 +164,9 @@ namespace Virtual_Pet
 
             string[] wheresBunny = new string[]
             {
-                "Where ",
-                "is the ",
-                "bunny? "
+                "What woud ",
+                "you like  ",
+                "to do next?"
             };
             foreach (string value in wheresBunny)
             {
@@ -200,7 +200,7 @@ namespace Virtual_Pet
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            MessageTwo();
+         //   MessageTwo();
         }
 
 

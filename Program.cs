@@ -19,7 +19,7 @@ namespace Virtual_Pet
             {
 
 
-                userBunny.Tick();
+                               
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("To see your bunny's name, type 1");
@@ -33,7 +33,7 @@ namespace Virtual_Pet
                 Console.WriteLine("To quit, type 9");                
                 userChoice = int.Parse(Console.ReadLine());                
                 Console.WriteLine();
-                Console.WriteLine();
+                Console.WriteLine();                
                 switch (userChoice)
                 {
                     case 1:
@@ -87,7 +87,7 @@ namespace Virtual_Pet
                         Console.WriteLine(userBunny.GiveToy(toy));
                         break;
                 }
-
+                userBunny.Tick();
             } while (userChoice != 9);
              
 
