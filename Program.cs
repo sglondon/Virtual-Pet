@@ -10,7 +10,7 @@ namespace Virtual_Pet
 
             int userChoice;
 
-            Bunny userBunny = new Bunny(false, true, "black", 2);
+            Bunny userBunny = new Bunny(false, true, "black", 0);
 
             Console.WriteLine("Hello, Let's meet your Virtual Pet.");
             Console.WriteLine("Your Pet is a Bunny!");
@@ -18,12 +18,12 @@ namespace Virtual_Pet
             do
             {
 
-                
-               
+
+                userBunny.Tick();
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("To see your bunny's name, type 1");
-                Console.WriteLine("To see if your bunny is hungry, type 2");
+                Console.WriteLine("To see if your bunny is hungry, type 2");                
                 Console.WriteLine("To see if your bunny needs some attention, type 3");
                 Console.WriteLine("To see how old your bunny is, type 4");
                 Console.WriteLine("To see what color fur your bunny has, type 5");
@@ -33,6 +33,7 @@ namespace Virtual_Pet
                 Console.WriteLine("To quit, type 9");
 
                 userChoice = int.Parse(Console.ReadLine());
+                
                 Console.WriteLine();
                 Console.WriteLine();
                 switch (userChoice)
@@ -50,7 +51,8 @@ namespace Virtual_Pet
                         break;
 
                     case 4:
-                        Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
+                     // userBunny.ChangeAge();
+                      Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
                         break;
 
                     case 5:
@@ -86,10 +88,10 @@ namespace Virtual_Pet
                 }
 
             } while (userChoice != 9);
-
+             
 
         }
-
+       
 
     }
 }

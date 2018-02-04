@@ -14,7 +14,7 @@ namespace Virtual_Pet
         private bool isBored;
         private string colorFur;
         private int age;
-        
+
 
 
 
@@ -54,7 +54,7 @@ namespace Virtual_Pet
             set { this.age = value; }
         }
 
-        
+
 
         //Create Constructors
 
@@ -74,7 +74,7 @@ namespace Virtual_Pet
             this.isBored = isBored;
             this.colorFur = colorFur;
             this.age = age;
-           
+
 
         }
 
@@ -152,16 +152,74 @@ namespace Virtual_Pet
         }
 
 
-       
-
-
-
+        public void ChangeAge()
+        {
+            this.age = ++age;
         }
 
 
+        public void Tick()
+        {
+            Console.WriteLine("Where is Twitch?");
+            ChangeAge();
+            Console.WriteLine("Twitch is " + age + " years old.");
 
 
 
+        //    int count = 0;
+            //string[] behaviors = new string[3];
+            //behaviors[0] = "Twitch has lost his tail!";
+            //behaviors[1] = "Twitch's ear's are growing!";
+            //behaviors[2] = "Twitch has hopped away!";
+
+            //for (int i = 0; i < behaviors.Length; i++)
+
+            //do
+            //{
+
+
+            ////    Console.WriteLine(count);
+            //    //   count++;
+
+            //    if (count == 0)
+            //    {
+            //        Console.WriteLine(behaviors[0]);
+            //        count++;
+
+            //    }
+            //    else if (count == 1)
+            //    {
+            //        Console.WriteLine(behaviors[1]);
+            //        count++;
+            //    }
+            //    else if (count == 2)
+            //    {
+            //        Console.WriteLine(behaviors[2]);
+            //        count++;
+            //    }
+
+
+            //} while (count < 3);
+
+            
 
     }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
