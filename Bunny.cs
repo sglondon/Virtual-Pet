@@ -100,17 +100,18 @@ namespace Virtual_Pet
         //method to feed Twitch
 
 
-        public string FeedTwitch()
+        public string FeedTwitch(string food)
         {
-            if (isHungry == true)
+            if (food == "yes")
+            
             {
-                return "Twitch is hungry and needs to be fed!";
+                isHungry = false;
+                return "Twitch is happy that he has been fed!";
             }
-            else
-            {
-                return "Twitch is not hungry, he has been fed!";
+                else if  (food == "no")            
+                isHungry = true;
+                return "Twitch is so hungry!";
             }
-        }
 
         //method to see if Twitch is bored
 

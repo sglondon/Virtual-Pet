@@ -10,7 +10,7 @@ namespace Virtual_Pet
 
             int userChoice;
 
-            Bunny userBunny = new Bunny(false, true, "black", 0);
+            Bunny userBunny = new Bunny(true, true, "black", 0);
 
             Console.WriteLine("Hello, Let's meet your Virtual Pet.");
             Console.WriteLine("Your Pet is a Bunny!");
@@ -23,7 +23,7 @@ namespace Virtual_Pet
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("To see your bunny's name, type 1");
-                Console.WriteLine("To see if your bunny is hungry, type 2");                
+                Console.WriteLine("To feed your bunny, type 2");                
                 Console.WriteLine("To see if your bunny needs some attention, type 3");
                 Console.WriteLine("To see how old your bunny is, type 4");
                 Console.WriteLine("To see what color fur your bunny has, type 5");
@@ -41,7 +41,10 @@ namespace Virtual_Pet
                         break;
 
                     case 2:
-                        Console.WriteLine(userBunny.FeedTwitch());
+                        Console.WriteLine();
+                        Console.WriteLine("Would you like to feed Twitch? Please type yes or no");
+                        string food = Console.ReadLine();
+                        Console.WriteLine(userBunny.FeedTwitch(food));
                         break;
 
                     case 3:
@@ -61,7 +64,7 @@ namespace Virtual_Pet
                         Console.WriteLine();
                         Console.WriteLine();
                         Console.WriteLine("Your Bunny's name is " + userBunny.Name);
-                        Console.WriteLine(userBunny.FeedTwitch());
+                        Console.WriteLine(userBunny.IsHungry);
                         Console.WriteLine(userBunny.BoredBunny());
                         Console.WriteLine(userBunny.Name + " is " + userBunny.Age + " years old.");
                         Console.WriteLine(userBunny.Name + " has " + userBunny.ColorFur + " fur.");
