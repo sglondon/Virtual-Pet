@@ -30,10 +30,8 @@ namespace Virtual_Pet
                 Console.WriteLine("To see your bunny's details, type 6");
                 Console.WriteLine("To change the color of your bunny's fur, type 7");
                 Console.WriteLine("To play with your bunny, type 8");
-                Console.WriteLine("To quit, type 9");
-
-                userChoice = int.Parse(Console.ReadLine());
-                
+                Console.WriteLine("To quit, type 9");                
+                userChoice = int.Parse(Console.ReadLine());                
                 Console.WriteLine();
                 Console.WriteLine();
                 switch (userChoice)

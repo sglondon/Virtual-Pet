@@ -158,52 +158,55 @@ namespace Virtual_Pet
         }
 
 
+        public void Message()
+        {
+
+            string[] wheresBunny = new string[]
+            {
+                "Where ",
+                "is the ",
+                "bunny? "
+            };
+            foreach (string value in wheresBunny)
+            {
+                Console.Write(value);
+            }
+
+        }
+
+
+        public void MessageTwo()
+        {
+
+            string[] theresBunny = new string[]
+            {
+                "There ",
+                "he ",
+                "is! "
+            };
+            foreach (string value in theresBunny)
+            {
+                Console.Write(value);
+            }
+
+        }
+
         public void Tick()
         {
-            Console.WriteLine("Where is Twitch?");
+            Message();
             ChangeAge();
-            Console.WriteLine("Twitch is " + age + " years old.");
+            FurChange("yellow polka dot");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            MessageTwo();
+        }
 
 
 
-        //    int count = 0;
-            //string[] behaviors = new string[3];
-            //behaviors[0] = "Twitch has lost his tail!";
-            //behaviors[1] = "Twitch's ear's are growing!";
-            //behaviors[2] = "Twitch has hopped away!";
-
-            //for (int i = 0; i < behaviors.Length; i++)
-
-            //do
-            //{
 
 
-            ////    Console.WriteLine(count);
-            //    //   count++;
 
-            //    if (count == 0)
-            //    {
-            //        Console.WriteLine(behaviors[0]);
-            //        count++;
-
-            //    }
-            //    else if (count == 1)
-            //    {
-            //        Console.WriteLine(behaviors[1]);
-            //        count++;
-            //    }
-            //    else if (count == 2)
-            //    {
-            //        Console.WriteLine(behaviors[2]);
-            //        count++;
-            //    }
-
-
-            //} while (count < 3);
-
-            
-
-    }
     }
 }
 
